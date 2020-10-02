@@ -17,9 +17,10 @@ def load_data():
     y_test = np.array(test.response)
     return X_train, y_train, X_test, y_test
     
+print("Loading data...")
 X_train, y_train, X_test, y_test = load_data()
 mnbsvm = NBSVM()
-
+print("Training model...")
 mnbsvm.fit(X_train, y_train)
 predicted_NBSVM = mnbsvm.predict(X_test)
 
